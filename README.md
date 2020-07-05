@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/igormcsouza/movie-review-plus-package.svg?branch=master)](https://travis-ci.org/igormcsouza/movie-review-plus-package)
 
-Package for Movie Review
+Package for Movie Review Plus
 
 ## Package Instalation
 
