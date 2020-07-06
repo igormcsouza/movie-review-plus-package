@@ -10,7 +10,7 @@ class RemovePonctuationPreprocessor(DefaultPreprocessors):
         punctuationTokenizer = tokenize.WordPunctTokenizer()
 
         processed_sentece = list()
-        for each in tqdm(column):
+        for each in tqdm(column, desc="RemovePonctuationPreprocessor"):
             filtered_sentence = list()
             wordish = punctuationTokenizer.tokenize(each)
             for item in wordish:

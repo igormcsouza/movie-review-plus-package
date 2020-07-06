@@ -12,7 +12,7 @@ class IrrelevantsPreprocessor(DefaultPreprocessors):
         irrelevants = stopwords.words("portuguese")
 
         processed_sentece = list()
-        for each in tqdm(column):
+        for each in tqdm(column, desc="IrrelevantsPreprocessor"):
             filtered_sentence = list()
             wordish = whiteSpaceTokenizer.tokenize(each)
             for item in wordish:
