@@ -8,5 +8,5 @@ class DefaultPreprocessors:
     def __init__(self):
         pass
 
-    def applyPreprocessors(self, column):
+    def apply_preprocessors(self, column):
         pass

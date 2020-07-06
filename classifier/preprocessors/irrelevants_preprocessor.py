@@ -5,7 +5,7 @@ from classifier.preprocessors import DefaultPreprocessors
 
 class IrrelevantsPreprocessor(DefaultPreprocessors):
 
-    def applyPreprocessors(self, column):
+    def apply_preprocessors(self, column):
         irrelevants = stopwords.words("portuguese")
 
         processed_sentece = list()
