@@ -1,3 +1,5 @@
+from tqdm import tqdm
+from nltk import tokenize
 from nltk.corpus import stopwords
 
 from classifier.preprocessors import DefaultPreprocessors
@@ -6,6 +8,7 @@ from classifier.preprocessors import DefaultPreprocessors
 class IrrelevantsPreprocessor(DefaultPreprocessors):
 
     def apply_preprocessors(self, column):
+        whiteSpaceTokenizer = tokenize.WhitespaceTokenizer()
         irrelevants = stopwords.words("portuguese")
 
         processed_sentece = list()
