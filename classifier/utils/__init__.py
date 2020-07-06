@@ -1,4 +1,6 @@
+import pandas as pd
 import seaborn as sns
+from nltk import tokenize,FreqDist
 from matplotlib import pyplot as plt
 
 def get_occurs_df(dataset, column):
@@ -10,6 +12,8 @@ def get_occurs_df(dataset, column):
     :return: DataFrame of occurrencies of each word in the dataset column
     
     """
+
+    whiteSpaceTokenizer = tokenize.WhitespaceTokenizer()
 
     all_words = ' '.join([item for item in dataset[column]])
     review_tokens = whiteSpaceTokenizer.tokenize(all_words)
