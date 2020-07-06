@@ -5,8 +5,8 @@ nltk.download('rslp')
 
 class DefaultPreprocessors:
 
-    def __init__(self, column):
-        self.column = column
+    def __init__(self):
+        pass
 
-    def applyPreprocessors(self):
+    def applyPreprocessors(self, column):
         pass
