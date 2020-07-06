@@ -7,6 +7,6 @@ setup(
     description='Process peoples review and classify as Positive or Negative',
     author='Igor Souza',
     url='https://igormcsouza.github.io',
-    install_requires=['numpy', 'keras', 'nltk'],
+    install_requires=['numpy', 'keras', 'nltk', 'tqdm'],
     packages=find_packages()
 )
