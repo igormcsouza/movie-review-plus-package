@@ -1,13 +1,21 @@
+import unidecode
+from tqdm import tqdm
+from nltk import tokenize
+from nltk.corpus import stopwords
+
 from classifier.preprocessors import DefaultPreprocessors
 
-class LowerCasePreprocessor(DefaultPreprocessors):
+class AccentuationPreprocessor(DefaultPreprocessors):
 
     def apply_preprocessors(self, column):
+        irrelevants = stopwords.words("portuguese")
+        whiteSpaceTokenizer = tokenize.WhitespaceTokenizer()
+
         column_2 = [unidecode.unidecode(review) for review in column]
         irrelavantes_without_accentuation = [unidecode.unidecode(each) for each in irrelevants]
 
         processed_sentece = list()
-        for each in tqdm(reviews['preprocess_2']):
+        for each in tqdm(column_2, desc="AccentuationPreprocessor"):
             filtered_sentence = list()
             wordish = whiteSpaceTokenizer.tokenize(each)
             for item in wordish:
@@ -15,4 +23,4 @@ class LowerCasePreprocessor(DefaultPreprocessors):
                     filtered_sentence.append(item)
             processed_sentece.append(' '.join(filtered_sentence))
 
-        reviews['preprocess_2'] = processed_sentece 
+        return processed_sentece 
