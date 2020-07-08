@@ -13,7 +13,8 @@ setup(
         'nltk>=3.5', 
         'tqdm>=4.47.0',
         'matplotlib',
-        'seaborn>=0.10.1'
+        'seaborn>=0.10.1',
+        'scikit-learn'
     ],
     packages=find_packages()
 )
