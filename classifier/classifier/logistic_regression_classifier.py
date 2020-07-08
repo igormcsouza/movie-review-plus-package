@@ -27,11 +27,11 @@ class LogisticRegressionClassifier(DefaultClassifier):
 
     def load(self, regressor_path, vectorizer_path):
 
-        if regressor_path == None or regressor_path.split(.)[-1] != 'joblib':
-            raise Exception("The Regressor path is not right! Make sure it has .joblib")
+        # if regressor_path == None or regressor_path.split(.)[-1] != 'joblib':
+        #     raise Exception("The Regressor path is not right! Make sure it has .joblib")
 
-        if vectorizer_path == None or vectorizer_path.split(.)[-1] != 'pickle':
-            raise Exception("The Regressor path is not right! Make sure it has .pickle")
+        # if vectorizer_path == None or vectorizer_path.split(.)[-1] != 'pickle':
+        #     raise Exception("The Regressor path is not right! Make sure it has .pickle")
 
         self.regressor = load(regressor_path)
         self.vectorizer = pickle.load(open(vectorizer_path, "rb"))
