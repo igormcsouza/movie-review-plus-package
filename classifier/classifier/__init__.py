@@ -1,9 +1,9 @@
 class DefaultClassifier():
 
-    def __init__(self, column, labels, max_features=100):
-        self._initialize_vectorizer_and_bag(column, labels, max_features)
+    def __init__(self):
+        pass
 
-    def _initialize_vectorizer_and_bag(self, column, labels, max_features):
+    def initialize_it(self, column, labels, max_features):
         pass
 
     def load(self):

@@ -10,7 +10,7 @@ from classifier.classifier import DefaultClassifier
 
 class LogisticRegressionClassifier(DefaultClassifier):
 
-    def _initialize_vectorizer_and_bag(self, column, labels, max_features):
+    def initialize_it(self, column, labels, max_features):
         self.vectorizer = TfidfVectorizer(
             max_features=max_features)  # max_features=100
 
